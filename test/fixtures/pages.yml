@@ -1,0 +1,57 @@
+--- 
+pages_001: 
+  name: About
+  updated_at: 2009-04-19 19:42:02
+  title: ""
+  public: t
+  id: "9"
+  visiblity: f
+  created_at: 2009-04-16 12:59:12
+pages_002: 
+  name: Todo
+  updated_at: 2009-04-18 02:17:59
+  title: Bugs and fixes
+  public: f
+  id: "12"
+  visiblity: f
+  created_at: 2009-04-17 19:14:59
+pages_003: 
+  name: Products
+  updated_at: 2009-04-20 19:29:14
+  title: ""
+  public: t
+  id: "13"
+  visiblity: f
+  created_at: 2009-04-18 01:42:42
+pages_004: 
+  name: Services
+  updated_at: 2009-04-18 02:27:09
+  title: ""
+  public: f
+  id: "14"
+  visiblity: f
+  created_at: 2009-04-18 01:43:24
+pages_005: 
+  name: Clients
+  updated_at: 2009-04-18 02:27:21
+  title: ""
+  public: f
+  id: "15"
+  visiblity: f
+  created_at: 2009-04-18 01:43:38
+pages_006: 
+  name: Portfolio
+  updated_at: 2009-04-18 01:44:20
+  title: ""
+  public: t
+  id: "16"
+  visiblity: f
+  created_at: 2009-04-18 01:44:20
+pages_007: 
+  name: ""
+  updated_at: 2009-04-20 19:16:46
+  title: ""
+  public: f
+  id: "18"
+  visiblity: f
+  created_at: 2009-04-20 19:16:46

@@ -1,0 +1,16 @@
+
+<% @helper = ViewHelper::Helper.new(self) %>
+
+<!-- page sections -->
+<% for section in @page.sections %>
+    <div class="section">
+        <h4><%= section.title %></h4>
+        <div>
+            <%= section.content %>
+        </div>
+    <%= @helper.edit_section_links(@page,section) %>
+    </div>
+<% end %>
+
+<p><%= @helper.new_section_link(@page) %></p>
+

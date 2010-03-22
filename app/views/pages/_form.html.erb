@@ -1,0 +1,24 @@
+<h2><%= @page.title %></h2>
+<div class="section">
+<% form_for(@page)  do |f|  %>
+            <% field_set_tag "Page Details" do %>
+
+                <!-- page details -->
+                <%= render  :partial => "page",  
+                            :locals => { :f => f }
+                %>
+                
+                <%= render:partial => "section",
+                            :locals => { :f => f }, 
+                            :collection => @page.sections, 
+                            :as => :section 
+                %>
+                
+                <p class="buttons">
+                    <input id="section_reset" name="reset" type="reset" value="Reset" />
+                     <%= f.submit "Submit &rarr;" %>
+                </p>
+
+            <% end %>
+<% end %>
+</div>

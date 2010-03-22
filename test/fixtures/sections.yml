@@ -1,0 +1,159 @@
+--- 
+sections_008: 
+  visible: f
+  updated_at: 2009-04-19 15:55:41
+  title: 0004 Page Title not aligned with menu
+  page_id: "12"
+  id: "28"
+  content: |-
+    <p>The page title has an additional margin displayed within the fixed width container, so  the text doesn't line up this is visually jarring</p>
+    
+    <p>to reproduce this behavior, turn on outlining and watch the mayhem.</p>
+  created_at: 2009-04-18 02:17:51
+sections_010: 
+  visible: f
+  updated_at: 2009-04-18 02:37:36
+  title: Brian Abrahams
+  page_id: "16"
+  id: "30"
+  content: <img src="/images/screens/brian.png">
+  created_at: 2009-04-18 02:37:20
+sections_009: 
+  visible: f
+  updated_at: 2009-04-19 18:07:41
+  title: Clients Area
+  page_id: "15"
+  id: "29"
+  content: |
+    <p>This is a secure place where you can <ul>
+    <li>check the progress of your project with status reports</li>
+    <li>upload assets</li>
+    <li>browse the source</li>
+    <li>download the latest version</li>
+    </ul>
+    </p>
+    
+    
+    
+    
+
+  created_at: 2009-04-18 02:25:55
+sections_011: 
+  visible: f
+  updated_at: 2009-04-19 13:59:03
+  title: Keyworder
+  page_id: "16"
+  id: "31"
+  content: <img src="/images/screens/keyworder.png">
+  created_at: 2009-04-19 13:59:03
+sections_012: 
+  visible: f
+  updated_at: 2009-04-19 18:26:55
+  title: ddd
+  page_id: "9"
+  id: "33"
+  content: dddd
+  created_at: 2009-04-19 18:26:55
+sections_001: 
+  visible: f
+  updated_at: 2009-04-19 15:47:38
+  title: what do we do?
+  page_id: "9"
+  id: "18"
+  content: |-
+    <p>FumaSoftware provides programming services and software consultancy for a diverse range of clients.</p>
+    
+    <p>Our consultancy can draw on over twenty years of combined experience in software development and visual/audio design for digital platforms.</p>
+    
+    <p>We have strong links with design agencies working very closely with <a href="http://www.tsubodesign.com">tSUBO Design</a> allows us to meet any size of commission from start-up through to the enterprise.</p>
+    
+    <p>Maintaining our ties with artists like the talented <a href="http://www.worksofmart.co.uk">Martyn Woods</a> allows us to offer visualisations in everything from flash through to the physical.</p>
+    
+    <p>Our relationships with distinguished musicians like <a href="http://www.brianabrahams.co.uk">Brian Abrahams</a> and <a href="http://www.genecalderazzo.com">Gene Calderazzo</a> mean we can rely on a wealth of musical experience to help meet your business needs.</p>
+  created_at: 2009-04-16 21:54:55
+sections_013: 
+  visible: f
+  updated_at: 2009-04-19 23:09:12
+  title: ddddqwad
+  page_id: "16"
+  id: "34"
+  content: wqdeddfad3
+  created_at: 2009-04-19 23:09:12
+sections_002: 
+  visible: f
+  updated_at: 2009-04-19 15:50:13
+  title: how much does it cost?
+  page_id: "9"
+  id: "19"
+  content: |-
+    <p>Each project is different and will be looked at on an individual basis.</p>
+    
+    <p>Generally speaking, services are provided on a "time and materials" basis or on an ongoing "supported project"  basis.</p>
+    
+    <p>We also offer account services allowing
+    our clients to pre-book an certain number of development days in advance and use those as short notice cover to help reduce the risk of in house project overruns</p>
+      
+    <p>We have found this arrangement allows us to offer the most flexible and responsive service to our clients.</p>
+  created_at: 2009-04-17 00:06:20
+sections_014: 
+  visible: f
+  updated_at: 2009-04-20 19:17:09
+  title: This is fuma
+  page_id: "18"
+  id: "35"
+  content: dsddds
+  created_at: 2009-04-20 19:17:09
+sections_003: 
+  visible: f
+  updated_at: 2009-04-19 15:56:49
+  title: 0001 Add sort order to pages
+  page_id: "12"
+  id: "22"
+  content: |
+    A way is needed for page to be sorted
+    with regard to the display in menus.
+
+  created_at: 2009-04-17 19:16:26
+sections_015: 
+  visible: f
+  updated_at: 2009-04-20 19:29:43
+  title: cheses
+  page_id: "13"
+  id: "36"
+  content: i like cheeses
+  created_at: 2009-04-20 19:29:43
+sections_004: 
+  visible: f
+  updated_at: 2009-04-19 15:56:41
+  title: 0002 Add page section list
+  page_id: "12"
+  id: "23"
+  content: |-
+    <p>The edit view for pages should show a list of sections for each pages as part of the view</p>
+    
+    <p>the section listing should be inline editable with delete/new links</p>
+  created_at: 2009-04-17 19:19:21
+sections_005: 
+  visible: f
+  updated_at: 2009-04-18 02:22:05
+  title: PSI Global
+  page_id: "16"
+  id: "25"
+  content: <p><img src="/images/screens/psiglobal.png">This is some text about Psi, it's quite rnadom in nature ans invoklves what ever i scould dredeg out odf stream of consiouness </p>
+  created_at: 2009-04-18 01:45:08
+sections_006: 
+  visible: f
+  updated_at: 2009-04-18 01:45:46
+  title: Lomas Jewellery
+  page_id: "16"
+  id: "26"
+  content: <img src="/images/screens/lomas.png">
+  created_at: 2009-04-18 01:45:46
+sections_007: 
+  visible: f
+  updated_at: 2009-04-18 02:00:00
+  title: GrowinLife
+  page_id: "16"
+  id: "27"
+  content: <img src="/images/screens/growin.png">
+  created_at: 2009-04-18 01:59:26

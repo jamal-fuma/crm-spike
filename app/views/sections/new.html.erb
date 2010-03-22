@@ -1,0 +1,8 @@
+<%= render:partial => "form" %>
+<%= observe_form(:new_section,
+                   :frequency => 0.5,
+                   :update => "live-preview" ,
+                   :complete => "Element.show('live-preview')" ,
+                   :url => {:controller=>"pages", :action=>"preview" , :id => @page.id})
+                   %>
+

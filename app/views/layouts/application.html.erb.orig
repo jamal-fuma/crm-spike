@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= stylesheet_link_tag 'master' %>
+	<title>FumaSoftware.com | <%= document_title %></title>
+        <meta name="author" content="Jamal Natour" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="software, web design, consultancy" />
+        <meta name="Generator" content="gen-html (c)FumaSoftware" />
+</head>
+<body>
+	<div id="wrapper">
+            <%= header_tag %>
+            <%= masthead_tag %>
+            <div id="content"  class="spacer">
+                <% framed_content_tag(:id => 'menu_frame', :content_title => 'Navigation') do %>
+                   <%= menu_list_tag %>
+                    <ul>
+                        <li><%= link_to 'Site Map','/' %> </li>
+                        <li><%= link_to 'Contact','/' %> </li>
+                        <li><%= link_to 'Terms &amp; Conditions','/' %> </li>
+                    </ul>
+                <%end %> 
+                <!-- end of left pane -->
+
+                <%= render:partial => "layouts/content" %>
+<!-- end of content block -->
+            </div>                    
+<!-- copyright block -->
+            <div id="copyright" class="spacer">
+                <div>  
+                    <p>&copy; 2009 FumaSoftware Limited - All Rights Reserved.</p>
+                </div>
+<!-- end of copyright block -->
+            </div>                    
+<!-- end of wrapper block -->
+        </div>
+</body>
+</html> 

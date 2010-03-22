@@ -1,0 +1,211 @@
+* {
+  margin: 0;            /* reset padding and margins leave the rest alone */
+  padding: 0; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(77,77,77);
+  font-size: 11px; 
+  background:silver;
+  padding-top:20px;
+}
+
+p {
+  margin-bottom:1.5em;
+}
+
+
+a {
+  color: rgb(60,114,168);
+  text-decoration: none; }
+
+a img {
+  border: none; }
+
+h1 {
+  font-size: 16px; }
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 16px;margin-bottom: 1em; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 11px; }
+
+ul, ol {
+  margin-left: 1.5em; }
+
+li {
+  margin-bottom: 5px; }
+
+.section {
+  margin-bottom:2em;
+}
+#wrapper  {
+  width:900px;
+  margin:0 auto;
+  border:solid gray 1px;
+  background:white;
+}
+
+#header {
+  height:80px;
+}
+
+#header .spacer, #header .spacer,#header .spacer img{
+    text-align:top;
+    border:solid gray 1px;
+vertical-align:top;}
+h1 {
+  float:left;
+  padding:20px 0 0 20px;
+  font-size:3em;
+}
+#search_box { float:right; vertical-align:top;margin:30px 20px 0 0;}
+
+#content  {
+  padding:20px;
+  height:600px;
+}
+
+/* forms */
+
+legend {
+  font-size:1.5em;
+  font-weight:bold;
+}
+fieldset {
+  border:solid gray 1px;
+  background:#eee;
+  padding:2em;
+}
+
+fieldset .clearfix label,
+fieldset .clearfix input,
+fieldset .clearfix select {
+  float:left;
+}
+
+fieldset .clearfix label {
+  width:10em;
+  text-align:right;
+  margin-right:0.5em;
+  line-height:1.8;
+}
+
+/* some highlights for the listing table */
+thead tr th { 
+    font-weight:bold; 
+    text-align:center;
+}
+tr td {
+    vertical-align:top;
+    text-align:center;
+}
+
+
+.buttons {
+  text-align:right;
+}
+/* hacks */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+#menu_frame,#content_frame{
+top: 0;
+bottom: 0; 
+}
+#content_frame h2{
+  border-bottom: dotted silver 3px;
+  margin-bottom:1em;
+}
+#menu_frame h2{
+  border-bottom: dotted silver 3px;
+}
+
+
+#menu_frame{
+width:  180px;
+height: 200px;
+overflow: hidden;
+border: solid 1px black;
+margin:0;
+float:left;
+}
+
+#content_frame{
+left: 0px; /* menu_frame */
+right: 0;
+overflow: auto; 
+border: solid 1px black;
+height:200px;
+}
+
+.inner_frame{
+margin: 4px;
+}
+
+.menubar {
+    display:inline-block;
+    vertical-align:top;
+    text-align:center;
+    font-weight:bold;
+    margin-top:30px;
+    margin-left:0px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+
+}
+
+div.spacer
+{
+    overflow:hidden;
+    border-bottom: solid black 0.1em;
+    width:95%;
+    margin-left:2.5%;
+    margin-right:3.5%;
+}
+
+ul.menu{
+list-style-image :url(/images/right_arrow.png) ;
+}
+
+ul.menu li a, #menu_frame ul.menu li a{
+  margin-bottom:0.1em;
+}
+
+.menubar ul.menu li a, .menubar ul.menu li{
+  margin-left:0.1em;
+  margin-bottom:0.1em;
+  display:inline;
+  color:#93a9d5;
+}
+
+
+#menubar ul.menu li a:hover, a:hover{ color:rgb(243,0,18)}
+

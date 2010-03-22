@@ -1,0 +1,30 @@
+<table>
+  <thead>
+  <tr>
+    <% for col in Page.content_columns[0,4] %>
+      <th><%=h col.human_name %></th>
+    <%end%>
+      <th>Raise</th>
+      <th>Lower</th>
+      <th>Edit</th>
+      <th>View</th>
+      <th>Delete</th>
+      <th> <%= link_to 'New page', new_page_path %></th>
+   </tr>
+  </thead>
+  <tbody>
+<% for page in @pages %>
+  <tr>
+  <% for col in Page.content_columns[0,4] %>
+    <td><%=h page.send col.name %></td>
+  <%end%>
+    <td><%= link_to 'Up', higher_page_path(page), :method => :put %></td>
+    <td><%= link_to 'Dwn', lower_page_path(page), :method => :put %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  </tbody>
+<% end %>
+</table>
+

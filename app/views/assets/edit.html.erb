@@ -1,0 +1,20 @@
+<h2>Editing asset</h2>
+<%= error_messages_for(:section,:asset, :class => "section" ) %>
+
+<div class="section">
+    <% form_for(:section,:asset, :html => { :multipart => true }) do |f| %>
+        
+        <!-- Picture -->
+        <%= image_tag @section.asset.public_filename %>
+        <p class="clearfix">
+            <%= f.label :filename %>
+            <%= f.file_field :uploaded_data, :accept => Phonebook::ContentMask %>
+        </p>
+
+        <!-- buttons -->
+        <p class="buttons">
+            <input id="asset_reset" name="reset" type="reset" value="Reset" />
+             <%= f.submit "Submit &rarr;" %>
+        </p>
+    <% end %>
+</div>

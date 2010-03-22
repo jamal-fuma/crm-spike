@@ -1,0 +1,40 @@
+<p>
+  <b>Size:</b>
+  <%=h @section.asset.size %>
+</p>
+
+<p>
+  <b>Content type:</b>
+  <%=h @section.asset.content_type %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%=h @section.asset.filename %>
+  <%= image_tag @section.asset.public_filename %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%=h @section.asset.height %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%=h @section.asset.width %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%=h @section.asset.parent_id %>
+</p>
+
+<p>
+  <b>Thumbnail:</b>
+  <%=h @section.asset.thumbnail %>
+  <%= image_tag @section.asset.public_filename(:thumb) %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_asset_path(@section.asset) %> |
+<%= link_to 'Back', :back %>

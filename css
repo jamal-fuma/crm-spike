@@ -1,0 +1,222 @@
+
+
+/* Fonts and defaults
+ *
+ */
+* {
+  margin: 0;            /* reset padding and margins leave the rest alone */
+  padding: 0; 
+  border:none;
+  left:0;
+  
+  color: rgb(77,77,77);
+
+  font-family:Arial, sans-serif;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; } 
+h4 { font-size: 12px; } 
+h5 { font-size: 11px; } 
+
+
+
+body {
+  background:#d6d6d6;   /* nice grey background from the empty space */
+  font-size: 14px;
+
+}
+
+
+
+
+
+
+/* Anchors */
+a, a:visited {
+  color: rgb(60,114,168);
+}
+a:hover { 
+  color: rgb(243,0,18);
+}
+li a:visited , li a, #header a, #header a:visited {
+  text-decoration:none;
+  text-transform:capitalize;
+  font-weight:bold;
+}
+li a:hover , #header a:hover { 
+  text-decoration:underline;
+}
+#client_frame a { font-weight:bold; }
+
+
+
+
+/* Structural declarations
+ *
+ * #wrapper
+ *    #header with category_frame and client_frame
+ *    #masthead with logo_frame and menubar_frame
+ *    #content with menu_frame and content_frame
+ *    #repeatnav
+ *    #copyright
+ */
+
+#wrapper  {
+  width:960px;
+  margin:0 auto;
+  border:solid black 1px;
+  padding-top:0.5em;
+  padding-left:0.6em;
+  padding-right:0.2em;
+  padding-bottom:10px;
+  background:white;
+
+ 
+/* #   background-color: rgb(90,173,28);      setup colours for elements */ 
+}
+
+#header { 
+  border-top:0;
+}
+
+div.spacer
+{
+    width:99%;
+    padding-top:10px;
+    border-top: solid #d6d6d6 0.1em;
+}
+
+
+
+/** Menus, 
+ *
+ *
+ *  .menu - vertical menu 
+ *  .menubar .menu - horizontal menu
+ *
+ */
+
+.menubar .menu li {
+  font-weight:bold;
+  margin-left:0.5em;
+  /* IE6 ignores the first-child selector, so this nasty mess is the workaround */
+  margin-left:expression(this.previousSibling == null ? '0px' : '0.5em') ;
+}
+
+.menubar ul.menu li, .menubar ul.menu  { display:inline; }
+
+/* IE6 ignores the first-child selector, but all sane browsers pick it up */
+.menubar .menu li:first-child { margin:0; }
+
+
+/* add some negative space around the menu */
+#masthead .menubar .menu li { line-height: 80px; }
+
+
+/** Frames, 
+ *
+ *
+ *  category_frame | client_frame
+ *  logo_frame     | menubar_frame
+ *  menu_frame     | content_frame
+ *
+ */
+#header.spacer, #category_frame, #client_frame { height:70px; }
+#masthead.spacer, #logo_frame, #menubar_frame { height:100px; }
+#content.spacer, #menu_frame, #content_frame { 
+  /* filthy min-height work around for IE6 */
+  min-height:570px;
+  height:auto !important;
+  height:570px;
+}
+
+#repeatnav.spacer {clear:both; height:30px; }
+#copyright.spacer { height:60px; }
+#content_frame { overflow:auto; }
+.inner_frame,#menu_frame,#category_frame,#logo_frame{ overflow: hidden; }
+
+#menu_frame,#category_frame,#logo_frame {
+  width:21.5%;
+  float:left;
+}
+
+/* tweaks to align to the right side of the page */
+#menubar_frame img, #client_frame a { float:right; }
+
+#page_name{
+  font-size: 18px;
+}
+
+/********
+ * Section customisations 
+ */
+.section p {
+  margin-bottom:2em;
+}
+/* nice background for the title */
+.section h4, #live-preview h4 {
+  background-color:#d6d6d6;
+  color:#0079b4;
+  font-weight:bold;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+}
+
+
+
+
+/**********
+ * Fieldset styles
+ */
+
+legend {
+  font-size:16px;
+  width:75%;
+}
+
+fieldset {
+  border:solid gray 1px;
+  padding: 15px 0 0 5px;
+  margin: 5px 0 0 5px;
+}
+
+fieldset .clearfix input,
+fieldset .clearfix textarea,
+fieldset .clearfix select {
+  float:left;
+  background-color:#eee;
+  width:75%;
+  font-size:14px;
+  
+}
+
+fieldset .clearfix label {
+  float:left;
+  width:10em;
+  text-align:right;
+  margin-right:0.5em;
+  line-height:1.8em;
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* hacks */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix { display: inline-block; }
+html[xmlns] .clearfix { display: block; }
+
+.buttons { text-align:right; }
+
+/* Nasty IE6 workaround */
+* html .clearfix { height: 1%; }
+

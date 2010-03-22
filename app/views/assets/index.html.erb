@@ -1,0 +1,30 @@
+<h1>Listing @section.assets</h1>
+
+<table>
+  <tr>
+    <th>Size</th>
+    <th>Content type</th>
+    <th>Filename</th>
+    <th>Height</th>
+    <th>Width</th>
+    <th>Parent</th>
+    <th>Thumbnail</th>
+  </tr>
+
+  <tr>
+    <td><%=h @section.asset.size %></td>
+    <td><%=h @section.asset.content_type %></td>
+    <td><%=h @section.asset.filename %></td>
+    <td><%=h @section.asset.height %></td>
+    <td><%=h @section.asset.width %></td>
+    <td><%=h @section.asset.parent_id %></td>
+    <td><%=h @section.asset.thumbnail %></td>
+    <td><%= link_to :show, @section %></td>
+    <td><%= link_to :edit, edit_section_asset_path(@section) %></td>
+    <td><%= link_to :destroy, @section.asset, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New @section.asset', new_section_asset_path([@section]) %>

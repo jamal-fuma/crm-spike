@@ -1,0 +1,18 @@
+<% section_prefix = "page#{ (section.new_record? ? 'new' : 'existing') }_section_attributes" %>
+<% fields_for("#{section_prefix}[]",section) do |section_flds| %>
+  <%= section_flds.error_messages %>
+  <p class="clearfix">
+    <%= section_flds.label :section_title %><br />
+    <%= section_flds.text_field :title %>
+  </p>
+  <p class="clearfix">
+    <%= section_flds.label :section_content %><br />
+    <%= section_flds.text_area :content %>
+  </p>
+  <p class="clearfix">
+    <%= section_flds.label :section_visible %><br />
+    <%= section_flds.check_box :visible %>
+  </p>
+<p><%= link_to 'New Asset', new_page_section_asset_path(@page,section) %></p>
+<% end %>
+

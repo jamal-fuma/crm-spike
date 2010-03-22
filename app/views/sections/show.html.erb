@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @section.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @section.content %>
+</p>
+
+<p>
+  <b>Visible:</b>
+  <%=h @section.visible %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_section_path(@page,@section) %> |
+<%= link_to 'Back', page_sections_path(@page) %>

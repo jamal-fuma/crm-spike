@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= stylesheet_link_tag 'master' %>
+	<title>FumaSoftware.com | <%= document_title %></title>
+        <meta name="author" content="Jamal Natour" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="software, web design, consultancy" />
+        <meta name="Generator" content="gen-html (c)FumaSoftware" />
+        <%= javascript_include_tag "prototype" %>
+</head>
+    <% @helper = new_helper(self) %>
+<body>
+    <div id="wrapper">
+            
+            <div id="header"  class="spacer">
+                    <!-- right pane -->
+                    <%= framed_content_tag(:id => 'category_frame'){  image_tag("category_white.png") } %>
+                    <!-- left pane -->
+                    <%= framed_content_tag(:id => 'client_frame'){  link_to 'Client Login','/pages/Clients.html' } %>
+            </div>
+            
+            <div id="masthead"  class="spacer">
+                    <!-- right pane -->
+                    <%= framed_content_tag(:id => 'logo_frame'){  @helper.company_logo_link } %>
+                    <!-- left pane -->
+                    <%= framed_content_tag(:id => 'menubar_frame'){  @helper.menubar + @helper.page_title_helper } %>
+            </div>
+
+            <div id="content"  class="spacer">
+                    <!-- right pane -->
+                    <%= framed_content_tag(:id => 'menu_frame',:content_title => 'navigation'){  menu_list_tag } %>
+                    <!-- left pane -->
+                    <%= framed_content_tag(:id => 'content_frame') { yield } %>
+            </div>                    
+
+            <div id="repeatnav" class="spacer">
+              <%= @helper.menubar %>
+            </div>
+
+            <%= copyright_tag { "FumaSoftware Limited - All Rights Reserved." } %>
+    </div>
+        
+</body>
+</html> 

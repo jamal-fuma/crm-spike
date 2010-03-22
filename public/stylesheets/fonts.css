@@ -1,0 +1,76 @@
+/* parent rule for this sheet */
+* {
+    margin: 0;
+    padding: 0; 
+    
+    font-family: Arial, sans-serif,serif;
+    font-size: 1em;
+    color: rgb(77,77,77);
+ }
+
+body {
+    background:#d6d6d6;
+    border: none; 
+}
+
+/* basic two column semi-fluid layout */
+#wrapper  {
+  width:960px;
+  margin:0 auto;
+  border:solid black 0.12em;
+  background:white;
+}
+/********************
+ *      HEADER 
+ */
+#header{
+    height:70px;
+    background:green;
+    text-align:right;
+}
+
+#header img{
+  padding-right:76.4%;
+}
+
+#header a{
+  vertical-align:top;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:1.05em;
+}
+
+#header{
+    height:70px;
+    background:green;
+    text-align:right;
+}
+
+
+
+/* headings */
+h2 { 
+    font-size: 1.3em; /* 16px */
+}
+h3 { 
+    font-size: 1.3em; /* 16px */
+    margin-bottom: 1em; 
+} 
+
+h4 { 
+    font-size: 0.9em; /* 12px */
+}
+
+.section h4 { 
+    font-size: 0.9em; /* 12px */
+    color:#0079b4;
+    font-weight:bold;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-size:1.2em;
+} 
+
+h5 { 
+    font-size: 0.8em; /* 11px */
+}
+

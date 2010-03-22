@@ -1,0 +1,142 @@
+module ViewHelper
+class Helper
+    def initialize(template)
+        @template = template
+    end
+
+    def authenticated(&block)
+        unless (logged_in?)
+            content_tag(:span)
+        else
+             content_tag(:span,capture(&block))
+        end
+    end
+
+    def cms_links
+        authenticated do
+            link_to('New ', new_page_path()) +
+            link_to('CMS ', pages_path())
+        end
+    end
+    
+    def masthead
+        spacer_tag(:id => 'masthead') {
+            menubar + page_title_helper
+        }
+    end
+
+    def render_header
+       company_category + 
+       masthead + 
+       cms_links
+    end
+
+    def company_logo_link
+        link_to(image_tag("fuma_logo_col.png"),'/')
+    end
+
+    def company_category
+        spacer_tag(:id => 'header') {
+            image_tag("category_white.png") +  link_to('Client Login','/Clients.html')
+        }
+    end
+    
+   
+    def page_name_helper
+        content_tag(:span, title_for_page ,:id => 'page_name' )
+    end
+    
+    def menubar
+        div_tag(:class => 'menubar')  {
+            company_logo_link + menu_list_tag(:class => 'menu') 
+        }
+    end
+
+    def page_title_helper
+        div_tag(:id => 'page_title'){
+            page_name_helper + image_tag("colors.png")
+        }
+    end
+
+    def menu_item_tag(title,url,opts={})
+        content_tag(:li, opts){ 
+            link_to(propercase(title), url )
+        }
+    end
+
+    def menu_list_tag(opts={:class =>'menu', :id => ''})
+        block_tag(:ul,opts) do
+            Page.visible_pages.inject("") { |result, pg| 
+                result << menu_item_tag(pg.name, "#{page_url( :id => pg.name)}.html") 
+            }
+        end
+    end
+
+    def new_section_link(page)
+        authenticated do 
+            link_to('New section', new_page_section_path(page))
+        end
+    end
+
+    def edit_section_links(page,section)
+        authenticated do 
+            link_to( 'Edit', edit_page_section_path(page,section)) + "|" +
+            link_to('Remove', [page,section], :confirm => 'Are you sure?', :method => :delete)
+        end
+    end
+   
+    def method_missing(*args, &block)
+        @template.send(*args, &block)
+    end
+    
+    def spacer_tag(opts = {}, &block )
+        opts[:class] = 'spacer' unless opts[:class]
+        div_tag(opts,&block)
+    end
+
+    def div_tag(opts, &block )
+        block_tag(:div,opts,&block)
+    end
+
+    def block_tag(*args, &block )
+        sym = args.shift ||= :div
+        opts = args.first
+        if(opts.is_a?(Hash) && !block_given?)
+            raise "block_tag requires a block if you pass an attribute hash" 
+        elsif(opts.is_a?(String) && block_given?)
+            raise "block_tag can't take a block if you pass inline-content" 
+        end
+        if block_given?
+          content_tag(sym, opts) { yield }
+        else
+          content_tag(sym,opts) 
+        end
+    end 
+    def framed_content(opts={},&block)
+        title = opts.delete(:content_title)
+        frame_class = opts.delete(:inner_frame_class)
+        frame_class ||= 'inner_frame'
+        div_tag(opts) do
+            div_tag(:class => frame_class) do
+                framed_content_title(title) + 
+                yield
+            end
+        end
+    end
+        
+    def framed_content_title(title,opts={})
+        (title) ? content_tag(:h2,propercase(title),opts) : ""
+    end
+
+    def copyright_tag(opts={},&block)
+        opts[:inner_frame_class] ||= ''
+        opts[:class] ||= 'spacer'
+        framed_content_tag(opts) {
+            content_tag(:p, ("&copy; #{Time.now.year} " + ((block_given?) ? yield : "")))
+        }
+    end
+
+
+ end
+ end
+

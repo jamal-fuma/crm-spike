@@ -1,0 +1,60 @@
+<h2><%= @page.title %></h2>
+<div class="section">
+<% form_for(@page)  do |f|  %>
+            <% field_set_tag "Page Details" do %>
+                <p class="clearfix">
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                </p>
+                
+                <p class="clearfix">
+                    <%= f.label :title %>
+                    <%= f.text_field :title %>
+                </p>
+
+                <p class="clearfix">
+                    <%= f.label :visiblity %><br />
+                    <%= f.check_box :visiblity %>
+                </p>
+                
+                <p class="clearfix">
+                    <%= f.label :public %><br />
+                    <%= f.check_box :public %>
+                </p>
+                <p>
+
+                <% @page.sections.each do |section| %>
+                    <% prefix ="page[#{ (section.new_record? ? 'new' : 'existing') }_section_attributes]" %>
+                    <% fields_for("#{prefix}[]",section) do |section_flds| %>
+                      <%= section_flds.error_messages %>
+
+                      <p>
+                        <%= section_flds.label :title %><br />
+                        <%= section_flds.text_field :title %>
+                      </p>
+                      <p>
+                        <%= section_flds.label :visible %><br />
+                        <%= section_flds.check_box :visible %>
+                      </p>                      
+                    <% end %>
+                    <% section.assets.each do |asset| %>
+                    <% fields_for("#{prefix}[section#{ (asset.new_record? ? 'new' : 'existing') }_asset_attributes][]", asset) do |asset_flds| %>
+                                   <!-- Picture -->
+                <p class="clearfix">
+                    <%= asset_flds.image_tag asset.public_filename %>
+                    <%= asset_flds.label :filename %>
+                    <%= asset_flds.file_field :uploaded_data %> <!-- mime/type hash accept -->
+                </p>
+        <% end %>
+
+                <% end %>
+                </p>
+                <p class="buttons">
+                    <input id="section_reset" name="reset" type="reset" value="Reset" />
+                     <%= f.submit "Submit &rarr;" %>
+                </p>
+
+            <% end %>
+
+<% end %>
+</div>

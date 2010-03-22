@@ -1,0 +1,29 @@
+<div id="live-preview" class="section" style="display:none;">
+
+</div>
+
+<%= link_to 'Back', page_sections_path(@page) %>
+
+<% form_for([@page,@section] )  do |f| %>
+  <%= f.error_messages %>
+  <% field_set_tag "Section Details" do  %>
+  <p class='clearfix'>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p class='clearfix'>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :rows => 5 %>
+  </p>
+  <p class='clearfix'>
+    <%= f.label :visible %><br />
+    <%= f.check_box :visible %>
+  </p>
+  <p class='buttons'>
+    <%= f.submit "Save" %>
+  </p>
+  <% end %>
+<% end %>
+
+

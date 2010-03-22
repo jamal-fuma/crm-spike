@@ -1,0 +1,68 @@
+body
+#wrapper
+
+#header.spacer
+#masthead.spacer
+
+#header.spacer img
+#header.spacer a
+
+#masthead.spacer
+#masthead.spacer .menubar
+#masthead.spacer .menubar a
+#masthead.spacer .menubar a img
+#masthead.spacer .menubar .menu
+#masthead.spacer .menubar .menu li
+#masthead.spacer .menubar .menu li a
+<div class="spacer" id="masthead">
+    <ul class="menu"><li><a href="/pages/9">About</a></li><li><a href="/pages/13">Products</a></li><li><a href="/pages/16">Portfolio</a></li>
+    </ul>
+    </div>
+    <div id="page_title">
+        <span id="page_name">Products</span>
+        <img alt="Colors" src="/images/colors.png?1118450701" />
+    </div>
+</div>
+<span></span>
+<div id="content"  class="spacer">
+<!-- right pane -->
+
+<div id="menu_frame">
+<div class="inner_frame">
+<h2>Navigation</h2>
+
+<ul class="menu" id=""><li><a href="/pages/9">About</a></li> <li><a href="/pages/13">Products</a></li> <li><a href="/pages/16">Portfolio</a></li></ul></div>
+</div>
+
+<!-- left pane -->
+<div id="content_frame">
+<div class="inner_frame">
+
+
+
+
+<!-- page sections -->
+
+<div class="section">
+<h4>cheses</h4>
+<div>
+i like cheeses
+</div>
+
+<span></span>
+</div>
+
+
+<p><span></span></p>
+
+</div>
+</div>
+
+</div>                    
+<div class="spacer"><div><p>&copy; 2009 FumaSoftware Limited - All Rights Reserved.</p></div></div>
+</div>
+
+
+</body>
+</html> 
+

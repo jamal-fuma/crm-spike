@@ -1,0 +1,43 @@
+*{
+/* outlining */
+border:solid red 0.1em;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.section {
+  margin-bottom:2em;
+}
+
+.menubar
+{
+    background-color:blue;
+}
+ .menubar ul.menu li{
+  margin-left:0.3em;
+  margin-right:0.1em;
+  border-right: solid #d6d6d6 1px;
+  margin-bottom:0.1em;
+  display:inline-block;
+  list-style-image :url("/images/right_arrow.gif");
+}
+
+.menubar ul {
+width:70%;
+display:inline;
+vertical-align:middle;
+}
+.
+/********************
+ *      MASTHEAD
+ */
+#masthead
+{
+    border-top: solid #d6d6d6 0.1em;
+    border-bottom: solid #d6d6d6 0.1em;
+    height:105px;
+}
+.menubar img {
+}
